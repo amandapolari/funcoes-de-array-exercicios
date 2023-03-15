@@ -7,14 +7,22 @@ const objeto = {
 };
 
 // 1)
-const letrasEmCaixaAlta = (item) => {
-    item = { ...objeto };
-    item.nome = item.nome.toUpperCase();
-    item.profissao = item.profissao.toUpperCase();
-    item.username = item.username.toUpperCase();
-    item.senha = item.senha.toUpperCase();
-    return item;
+// const letrasEmCaixaAlta = (item) => {
+//     item = { ...objeto };
+//     item.nome = item.nome.toUpperCase();
+//     item.profissao = item.profissao.toUpperCase();
+//     item.username = item.username.toUpperCase();
+//     item.senha = item.senha.toUpperCase();
+//     return item;
+// };
+const letrasEmCaixaAlta = (obj) => {
+    const newObj = {};
+    for (let prop in obj) {
+        newObj[prop] = obj[prop].toUpperCase();
+    }
+    return newObj;
 };
+
 // console.log(letrasEmCaixaAlta(objeto));
 
 // 2)
